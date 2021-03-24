@@ -1,22 +1,11 @@
-// alert("Hello")
-let msg = "Hello JavaScript";
+// Clock 
+setInterval(updateClock, 1000);
 
-const UserName = prompt("Enter your name");
-alert("Hello " + UserName)
-
-const userAge = Number(prompt("Enter your age"));
-alert("Your age is " + userAge);
-
-const nextAge = add(userAge, 1);
-alert("Your nextAge should be " + nextAge);
-
-if(userAge >= 18){
-    alert("You are adult");
-}else{
-    alert("You are underAge");
+function updateClock() {
+    const clockContainer = document.querySelector('.clock');
+    clockContainer.innerText = new Date().toLocaleTimeString();
 }
 
-function add(a,b){
-    const result = a + b;
-    return result;
-}
+
+
+
